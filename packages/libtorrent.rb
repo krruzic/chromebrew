@@ -14,7 +14,10 @@ class Libtorrent < Package # the package name
   source_url 'http://rtorrent.net/downloads/libtorrent-0.13.6.tar.gz'
   source_sha1 '493691929b701f4402f13c725840addf95231ad2' # software source sha1sum
 
-  depends_on 'buildessential automake m4 curl'
+  depends_on 'buildessential'
+  depends_on 'automake' 
+  depends_on 'm4'
+  depends_on 'curl'
   depends_on 'gcc'  
 
   def self.build                                                  # self.build 
