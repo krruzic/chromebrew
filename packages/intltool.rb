@@ -1,7 +1,7 @@
 require 'package'
 
 class Intltool < Package
-  version '0.51.0'
+  version '0.12'
   source_url 'https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz'
   source_sha1 'a0c3bcb99d1bcfc5db70f8d848232a47c47da090'
 
