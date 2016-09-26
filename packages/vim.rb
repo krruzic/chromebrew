@@ -2,8 +2,8 @@ require 'package'
 
 class Vim < Package
   version '7.4'
-  source_url 'ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2'
-  source_sha1 '601abf7cc2b5ab186f40d8790e542f86afca86b7'
+  source_url 'http://vim.mirror.anstey.ca/unix/vim-8.0.tar.bz2'
+  source_sha1 '3e6fbe7f2d27d9119650d3c9f70d90f3f7e41d24'
 
   depends_on 'ncurses'
   depends_on 'perl'
@@ -11,7 +11,7 @@ class Vim < Package
   depends_on 'ruby'
 
   def self.build
-    system './configure --prefix=/usr/local --enable-gui=no --with-features=huge --without-x --disable-nls --with-tlib=ncurses --enable-perlinterp --enable-pythoninterp  --enable-rubyinterp --with-ruby-command=/usr/local/bin/ruby'
+    system './configure --disable-selinux --prefix=/usr/local --enable-gui=yes --with-features=huge --without-x --disable-nls --with-tlib=ncurses --enable-perlinterp --enable-pythoninterp  --enable-rubyinterp --with-ruby-command=/usr/local/bin/ruby'
     system "make"
   end
 
